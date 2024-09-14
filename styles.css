@@ -1,0 +1,597 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.headerContainer{
+    width: 100%;
+    height: 700px;
+    background-image: url(./Images/ayodhya.webp);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    position: static;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    font-size: 16px;
+}
+.navBar{
+    width: 15%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+.navBar_Links {
+    width: 70%;
+    height: 100%;
+    cursor: pointer;
+    position: static;
+    display: flex;
+    flex-direction: row;
+    background-color: none;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: white;
+    list-style: none;
+}
+.navBar_Links li {
+    position: relative;
+    padding-bottom: 5px;
+}
+.navBar_Links li::after {
+    content: '';
+    position: absolute;
+    background-color: #e82574;
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s linear;
+}
+.navBar_Links li:hover::after {
+    width: 100%;
+}
+.navBar_Btn{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+button{
+    width: 150px;
+    height: 50px;
+    background-color: #e82574;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #d4145a;
+}
+.homeContainer {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.homeContainer p{
+    opacity: 0.8;
+    font-size: 20px;
+    animation: homeContent 2s forwards 1;
+    position: relative;
+    top: 50px;
+}
+.homeContainer h1{
+    font-size: 54px;
+    animation: homeContent 5s forwards 1;
+    position: relative;
+    top: 50px;
+}
+.homeContainer span{
+    color: #e82574;
+}
+@keyframes homeContent {
+    100%{
+        transform: translateY(-100px);
+    }
+}
+.bookingForm{
+    width: 80%;
+    height: 115px;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 10px;
+    transform: translateY(-50%);
+    box-shadow: 5px 5px 20px lightgray;
+    padding: 2rem;
+    position: relative;
+    left: 10%;
+}
+.aboutContainer{
+    width: 100%;
+    height: 650px;
+    display: flex;
+    position: static;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 120px;
+}
+.aboutImage{
+    width: 33%;
+    height: 95%;
+    animation: aboutImage 2s forwards 1;
+}
+@keyframes aboutImage {
+    0%{
+        transform: translateX(-100px);
+
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.aboutContent {
+    width: 67%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px 100px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.aboutTitle {
+    font-size: 20px;
+    font-weight: bold;
+    animation: aboutContent 1s forwards 1;
+    position: relative;
+    top: 100px;
+}
+.aboutContent h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    animation: aboutContent 4s forwards 1;
+    position: relative;
+    top: 100px;
+}
+.aboutContent p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+    animation: aboutContent 3s forwards 1;
+    position: relative;
+    top: 100px;
+}
+.aboutContent h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    animation: aboutContent 2s forwards 1;
+    position: relative;
+    top: 100px;
+    cursor: pointer;
+}
+.aboutContent h4 a {
+    color: #5b34ad;
+}
+.aboutContent button{
+    animation: aboutContent 1s forwards 1;
+    position: relative;
+    top: 100px;
+}
+@keyframes aboutContent {
+    100%{
+        transform: translateY(-100px);
+    }
+}
+.roomsContainer{
+    width: 100%;
+    height: 775px;
+    padding: 4rem 4rem;
+    margin: auto;
+}
+.roomsTitle{
+    font-size: 20px;
+    font-weight: bold;
+    animation: roomsContent 2s forwards 1;
+}
+.roomsContainer h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+.roomsContainer p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+.roomsGrid{
+    width: 100%;
+    height: 80%;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.roomsCard{
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px lightgray;
+    padding: 1rem;
+    animation: roomsContent 2s forwards 1;
+}
+@keyframes roomsContent {
+    0%{
+        transform: translateX(-100px);
+
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.roomsCardImage{
+    width: 100%;
+    height: 50%;
+}
+.roomsCardIcons{
+    width: 60%;
+    height: 22%;
+    position: relative;
+    bottom: 27%;
+    left: 35%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.roomsCardEachIcons{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: whitesmoke;
+}
+.roomsCardEachIcons:hover{
+    background-color: lightgrey;
+}
+.roomsCardDetails{
+    width: 100%;
+    height: 48%;
+    margin-top: 2%;
+    padding: 1rem;
+}
+.servicesContainer{
+    width: 100%;
+    height: 500px;
+    margin: 5rem 0;
+    background-image: url(./Images/palash.webp);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.servicesContent{
+    width: 45%;
+    height: 100%;
+    background-color: white;
+    position: relative;
+    left: 50%;
+    padding: 5rem;
+}
+.servicesTitle{
+    font-size: 20px;
+    font-weight: bold;
+    animation: servicesContent 2s forwards 1;
+}
+.servicesContent h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    animation: servicesContent 2s forwards 1;
+}
+.servicesContent p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+.servicesContent ul{
+    list-style: none;
+}
+.servicesContent li{
+    padding: 1rem;
+    animation: servicesContent 2s forwards 1;
+}
+.servicesContent li span{
+    padding: 1rem;
+    margin-left: 10px;
+    font-size: 20px;
+    color: black;
+    opacity: 0.7;
+}
+@keyframes servicesContent {
+    0%{
+        transform: translateX(-75px);
+
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.bannerContainer{
+    width: 90%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px lightgray;
+    position: relative;
+    left: 5%;
+}
+.bannerCard{
+    width: 45%;
+    height: 80%;
+    text-align: center;
+    padding: 1.5rem;
+}
+.bannerCard h4{
+    font-size: 32px;
+    font-weight: bold;
+    font-weight: 700;
+    color: black;
+}
+.bannerCard p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+.gallaryContainer{
+    width: 100%;
+    height: 750px;
+    margin-top: 6rem;
+}
+.gallaryContent{
+    width: 100%;
+    height: 4%;
+    margin: 1rem 0;
+    text-align: center;
+}
+.gallaryTitle{
+    font-size: 20px;
+    font-weight: bold;
+    animation: gallaryContent 2s forwards 1;
+}
+@keyframes gallaryContent {
+    0%{
+        transform: translateX(-650px);
+
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.gallaryContent p{
+    font-size: 16px;
+    color: #666;
+}
+.gallaryBox{
+    width: 100%;
+    height: 96%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 31% 31% 31%;
+}
+.box1{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.box2{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.box6{
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+.box9{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.contactContainer{
+    width: 100%;
+    height: 100vh;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactContent{
+    width: 90%;
+    min-width: auto;
+    min-height: 550px;
+    margin: 20px;
+    box-shadow: 0 20px 50px lightgrey;
+    display: flex;
+}
+.contactInfo{
+    width: 30%;
+    background-color: #e82574;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: white;
+    line-height: 1.6;
+}
+.contactInfoTitle{
+    padding: 1rem;
+}
+.contactInfo ul{
+    list-style: none;
+    line-height: 1.5;
+}
+.contactInfo li{
+    padding: 1rem;
+    
+}
+.contactInfo li span{
+    padding: 0.5rem;
+}
+.contactInfoIcons{
+    width: 400px;
+    position: relative;
+    display: flex;
+}
+.contactForm {
+    width: 70%;
+    position: relative;
+    padding: 40px;
+}
+
+.contactFormBox {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    border-radius: 15px;
+    margin: 3rem;
+}
+
+.contactFormInputBox {
+    width: 47%;
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.contactFormInputBox1 {
+    width: 100%;
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.contactForm input, .contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    margin-top: 5px;
+    background-color: #f9f9f9;
+}
+
+.contactForm span {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    font-size: 14px;
+    color: gray;
+    font-weight: 500;
+}
+
+.sendButton {
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sendButton:hover {
+    background-color: #c51b61;
+    color: white;
+}
+
+.mapContainer{
+    width: 100%;
+    height: 400px;
+    margin-top: 3rem;
+}
+
+footer{
+    width: 100%;
+    height: 500px;
+    border: 1px solid;
+    margin-top: 0.5rem;
+    background-color: black;
+}
+.footerContainer{
+    width: 92%;
+    height: 60%;
+    /* border: 1px solid white; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem 2rem;
+    margin: 4rem 3rem;
+}
+.footerColumn{
+    color: white;
+}
+.footerColumn ul{
+    margin-top: 2rem;
+    color: gray;
+}
+.footerColumn li{
+    list-style: none;
+    line-height: 2;
+}
+.footerLogo{
+    max-width: 120px;
+}
+.footerDescription{
+    max-width: 600px;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    color: gray;
+    line-height: 1.5;
+}
+.footerSocials{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.footerBar{
+    padding: 1rem;
+    font-size: 1rem;
+    color: grey;
+    text-align: center;
+}
